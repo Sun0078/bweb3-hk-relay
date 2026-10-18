@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
   // 3. 8秒超时保护
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 8000);
+  const timer = setTimeout(() => ctrl.abort(), 15000);
 
   try {
     const r = await fetch(finalUrl, {
