@@ -1,3 +1,13 @@
 {
-  "regions": ["hkg1"]
+  "regions": ["hkg1"],
+  "rewrites": [
+    {
+      "source": "/fapi/:path*",
+      "destination": "https://fapi.binance.com/fapi/:path*"
+    },
+    {
+      "source": "/futures/:path*",
+      "destination": "https://fapi.binance.com/futures/:path*"
+    }
+  ]
 }
